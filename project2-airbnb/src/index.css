@@ -1,0 +1,87 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+  font-family: 'Poppins';
+}
+
+nav{
+  padding: 22px 30px;
+  background-color: white;
+  box-shadow: 0px 3px 7.4564px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.hero{
+  padding: 36px;
+}
+
+.hero__text-cont{
+  max-width: 400px;
+}
+
+.hero__img{
+  display: block;
+  margin: auto;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.hero__title{
+  font-size: 39px;
+  margin-bottom: 16px;
+}
+
+.cards{
+  padding: 10px 36px;
+  display: flex;
+  gap: 18px;
+}
+
+.card{
+  font-size: 12px;
+}
+
+.card__top{
+  position: relative;
+}
+
+.card__img{
+  display: block;
+  width: 100%;
+}
+
+.card__availability{
+  background: #FFFFFF;
+  border-radius: 2px;
+  padding: 5px;
+  position: absolute;
+  margin: 7px;
+  top: 0;
+  left: 0;
+  font-size: 11px;
+}
+
+.card__info{
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card__reviews{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.card__reviews-count, .card__reviews-location{
+  color: #918E9B;
+}
+
+.card__price--bold{
+  font-weight: bolder;
+}
