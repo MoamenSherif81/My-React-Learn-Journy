@@ -17,8 +17,8 @@ body{
 }
 
 .container{
-  max-width: 320px;
-  width: 100%;
+  max-width: 400px;
+  width: 100vw;
   background-color: #1A1B21;
   border-radius: 10px;
   overflow: hidden;
@@ -57,11 +57,13 @@ main{
   display: flex;
   align-items: center;
   gap: 17px;
+  margin-bottom: 33px;
 }
 
 .contact__button{
   padding: 10px;
-  min-width: 115px;
+  max-width: 155px;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,6 +74,7 @@ main{
   background-color: white;
   font-size: 14px;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .contact__button > span img{
@@ -88,3 +91,38 @@ main{
   fill: white;
 }
 
+.about, .interests{
+  text-align: left;
+  color: white;
+  margin-bottom: 27px;
+}
+
+.about__title, .interests__title{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.about__text, .interests__text{
+  color: #DCDCDC;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+
+footer{
+  background-color: #161619;
+  padding: 20px;
+}
+
+.social{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.social__item > a img{
+  width: 40px;
+}

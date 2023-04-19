@@ -1,11 +1,13 @@
 import ContactButtons from "./ContactButtons";
 import PersonInfo from "./PersonInfo";
+import About from "./about";
+import Footer from "./footer";
+import Intersts from "./interests";
 
 function MainCard(){
   return (
     <main>
-      <PersonInfo />
-      <ContactButtons />
+      
     </main>
   );
 }
