@@ -57,10 +57,9 @@ nav{
 .card__img{
   display: block;
   width: 100%;
-  border-radius: 17px;
 }
 
-.card__availability{
+.card__badge{
   background: #FFFFFF;
   border-radius: 2px;
   padding: 5px;

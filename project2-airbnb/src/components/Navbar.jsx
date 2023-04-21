@@ -1,9 +1,7 @@
-import navLogo from '../images/logo.png';
-
 function Navbar(){
   return (
     <nav>
-      <img src={navLogo} alt="" className="nav__logo" />
+      <img src='../images/logo.png' alt="" className="nav__logo" />
     </nav>
   );
 }
