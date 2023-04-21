@@ -41,8 +41,15 @@ nav{
   gap: 18px;
 }
 
+@media (max-width: 512px) {
+  .cards{
+    flex-direction: column;
+  }
+}
+
 .card{
   font-size: 12px;
+  flex: 1 1 0px;
 }
 
 .card__top{
@@ -52,6 +59,7 @@ nav{
 .card__img{
   display: block;
   width: 100%;
+  border-radius: 17px;
 }
 
 .card__availability{
