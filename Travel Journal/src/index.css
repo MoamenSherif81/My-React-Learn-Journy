@@ -1,13 +1,106 @@
-body {
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: 'Inter';
+}
+
+nav{
+  background-color: #F55A5A;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+.nav__icon{
+  width: 27px;
+}
+
+.cards{
+  padding: 27px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.card{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  margin: 18px 0;
+}
+
+.card__img{
+  width: 180px;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+.card__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card__location{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card__country{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card__country span{
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__location-icon{
+  width: 15px;
+}
+
+.card__location-link a{
+  color: #918E9B;
+}
+.card__title{
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 17px;
+}
+
+.card__date{
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+@media (max-width: 512px) {
+  .card{
+    display: block;
+    text-align: center;
+  }
+
+  .card__img{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card__location{
+    justify-content: center;
+  }
+
+  .card__title{
+    margin-bottom: 15px;
+  }
 }
