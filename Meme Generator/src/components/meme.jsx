@@ -1,12 +1,23 @@
 import buttonImg from '../images/img.svg'
 import memesData from '../data/memesData'
+import { useState } from 'react';
 
 function Meme(){
+  let [meme, setMeme] = useState({
+    topText: '',
+    bottomText: '',
+    memeImg: 'https://i.imgflip.com/1bij.jpg',
+  });
+
+  let [allMemeImages, setAllMemeImages] = useState(memesData);
 
   function randomMeme(){
-    const memeArr = memesData.data.memes;
+    const memeArr = allMemeImages.data.memes;
     let randomIndex = Math.floor(Math.random() * memeArr.length);
-    console.log(memeArr[randomIndex].url)
+    setMeme(prev => ({
+      ...prev,
+      memeImg: memeArr[randomIndex].url
+    }));
   }
 
   return(
@@ -21,7 +32,7 @@ function Meme(){
         </button>
       </div>
       <div className="meme__img">
-
+        <img src={meme.memeImg} alt="" />
       </div>
     </div>
   );

@@ -101,6 +101,10 @@ nav{
   border-radius: 10px;
 }
 
+.meme__img img{
+  width: 100%;
+}
+
 @media (max-width: 512px) {
   .meme__input, .meme__submit{
     font-size: 16px;
