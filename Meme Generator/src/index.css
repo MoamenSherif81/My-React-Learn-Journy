@@ -105,10 +105,39 @@ nav{
   width: 100%;
 }
 
+.meme__img{
+  position: relative;
+}
+
+.meme__text{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 60px;
+  font-weight: bolder;
+  color: white;
+  text-shadow:
+    -2px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.meme__text--top{
+  top: 20px;
+}
+
+.meme__text--bottom{
+  bottom: 20px;
+}
+
 @media (max-width: 512px) {
   .meme__input, .meme__submit{
     font-size: 16px;
     padding: 10px;
     border-radius: 5px;
+  }
+  .meme__text{
+    font-size: 30px;
   }
 }
