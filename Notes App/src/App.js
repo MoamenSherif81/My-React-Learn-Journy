@@ -37,11 +37,23 @@ export default function App() {
     }
     
     function updateNote(text) {
-        setNotes(oldNotes => oldNotes.map(oldNote => {
-            return oldNote.id === currentNoteId
-                ? { ...oldNote, body: text }
-                : oldNote
-        }))
+        setNotes(oldNotes => {
+            let newNotes = [];
+            for(let i = 0; i < oldNotes.length; i++) {
+                console.log(newNotes);
+                if(oldNotes[i].id === currentNoteId){
+                    newNotes.unshift({...oldNotes[i], body: text});
+                } else {
+                    newNotes.push(oldNotes[i]);
+                }
+            }
+            return [...newNotes];
+        })
+    }
+
+    function deleteNote(event, noteId) {
+        event.stopPropagation()
+        setNotes(oldNotes => oldNotes.filter(note => note.id !== noteId));
     }
     
     function findCurrentNote() {
@@ -66,6 +78,7 @@ export default function App() {
                     currentNote={findCurrentNote()}
                     setCurrentNoteId={setCurrentNoteId}
                     newNote={createNewNote}
+                    deleteNote={deleteNote}
                 />
                 {
                     currentNoteId && 
