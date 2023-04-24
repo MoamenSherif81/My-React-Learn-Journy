@@ -1,25 +1,32 @@
 import buttonImg from '../images/img.svg'
-import memesData from '../data/memesData'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Meme(){
+  //initialize states
   let [meme, setMeme] = useState({
     topText: '',
     bottomText: '',
     memeImg: 'https://i.imgflip.com/1bij.jpg',
   });
+  let [allMemes, setAllMemes] = useState([]);
 
-  let [allMemeImages] = useState(memesData);
+  //Get the data from API and store it in the state
+  useEffect(() => {
+    fetch('https://api.imgflip.com/get_memes')
+      .then(res => res.json())
+      .then(data => setAllMemes(data.data.memes));
+  }, [])
 
+  //function to get a randome meme from memes Array
   function randomMeme(){
-    const memeArr = allMemeImages.data.memes;
-    let randomIndex = Math.floor(Math.random() * memeArr.length);
+    let randomIndex = Math.floor(Math.random() * allMemes.length);
     setMeme(prev => ({
       ...prev,
-      memeImg: memeArr[randomIndex].url
+      memeImg: allMemes[randomIndex].url
     }));
   }
 
+  //Function to handle the change of the form
   function handleChange(e){
     const {name, value} = e.target;
     setMeme(prev => ({
